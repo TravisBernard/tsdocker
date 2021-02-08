@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/tsmonorepo.iml" filepath="$PROJECT_DIR$/.idea/tsmonorepo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/tsdocker.iml" filepath="$PROJECT_DIR$/.idea/tsdocker.iml" />
     </modules>
   </component>
 </project>

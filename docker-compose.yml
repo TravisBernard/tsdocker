@@ -1,0 +1,28 @@
+version: "3"
+x-shared-bind-mounts:
+   - &sbm-node-modules "./node_modules:/opt/project/node_modules"
+   - &sbm-package-json "./package.json:/opt/project/package.json"
+   - &sbm-yarn-lock "./yarn.lock:/opt/project/yarn.lock"
+   - &sbm-tsconfig "./tsconfig.json:/opt/project/tsconfig.json"
+   - &sbm-tsconfigbuild "./tsconfig.build.json:/opt/project/tsconfig.build.json"
+services:
+   yarn:
+      image: node:14-buster
+      container_name: yarn
+      working_dir: /opt/project
+      volumes:
+         - ./:/opt/project
+      entrypoint: yarn
+   app:
+      image: node:14-buster
+      container_name: app
+      working_dir: /opt/project
+      volumes:
+         - *sbm-package-json
+         - *sbm-yarn-lock
+         - *sbm-tsconfig
+         - *sbm-tsconfigbuild
+         - *sbm-node-modules
+         - "./packages/app:/opt/project/packages/app"
+         - "./packages/mylib:/opt/project/packages/mylib"
+      command: yarn workspace @travbern/app start
