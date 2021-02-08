@@ -25,4 +25,4 @@ services:
          - *sbm-node-modules
          - "./packages/app:/opt/project/packages/app"
          - "./packages/mylib:/opt/project/packages/mylib"
-      command: yarn workspace @travbern/app start
+      entrypoint: yarn workspace @travbern/app
