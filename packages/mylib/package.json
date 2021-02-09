@@ -11,7 +11,8 @@
   "scripts": {
     "clean": "rm -rf ./dist && rm -rf tsconfig.build.tsbuildinfo",
     "compile": "tsc -b tsconfig.build.json",
-    "build": "yarn run clean && yarn run compile"
+    "build": "yarn run clean && yarn run compile",
+    "test:fast": "exit 0"
   },
   "devDependencies": {
     "@types/node": "^14.14.25",

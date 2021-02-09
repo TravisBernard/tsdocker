@@ -15,6 +15,7 @@
     "typescript": "^4.1.3"
   },
   "scripts": {
-    "postinstall": "husky install"
+    "postinstall": "husky install",
+    "test:fast": "yarn workspaces run test:fast"
   }
 }

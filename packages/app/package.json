@@ -12,7 +12,8 @@
     "clean": "rm -rf ./dist && rm -rf tsconfig.build.tsbuildinfo",
     "compile": "tsc -b tsconfig.build.json",
     "build": "yarn run clean && yarn run compile",
-    "start": "ts-node -r tsconfig-paths/register src/index.ts"
+    "start": "ts-node -r tsconfig-paths/register src/index.ts",
+    "test:fast": "exit 0"
   },
   "dependencies": {
     "@travbern/mylib": "^1.0.0"
