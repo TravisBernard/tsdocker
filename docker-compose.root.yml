@@ -9,3 +9,4 @@ services:
          - "./yarn.lock:/opt/project/yarn.lock"
          - "./tsconfig.json:/opt/project/tsconfig.json"
          - "./tsconfig.build.json:/opt/project/tsconfig.build.json"
+         - "./lint-staged.config.js:/opt/project/lint-staged.config.js"
