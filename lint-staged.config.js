@@ -1,5 +1,7 @@
-const typecheck = () => "yarn tsc --noEmit"
+const prettier = "yarn prettier --write";
+const typecheck = () => "yarn tsc --noEmit";
 
 module.exports = {
-   "*.{ts,tsx}": [typecheck],
-}
+    "*.{ts,tsx}": [prettier, typecheck],
+    "*.{graphql,yml,md,scss,js,jsx}": [prettier],
+};
