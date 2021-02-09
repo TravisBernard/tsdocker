@@ -7,6 +7,7 @@ git config user.name "$(git config --global user.name)"
 ```
 
 Use
+
 `docker-compose run app start`
 or
 `docker-compose run app build`

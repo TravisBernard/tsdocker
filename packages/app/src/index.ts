@@ -1,4 +1,6 @@
-import "tsconfig-paths/register"
+import "tsconfig-paths/register";
 import { greeting } from "@travbern/mylib";
 
-console.log(greeting);
+export const greet = () => console.log(greeting);
+
+greet();

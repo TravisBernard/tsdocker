@@ -1,12 +1,11 @@
 version: "3"
 services:
-   app:
-      image: node:14-buster
-      working_dir: /opt/project
-      volumes:
-         - "./node_modules:/opt/project/node_modules"
-         - "./package.json:/opt/project/package.json"
-         - "./yarn.lock:/opt/project/yarn.lock"
-         - "./tsconfig.json:/opt/project/tsconfig.json"
-         - "./tsconfig.build.json:/opt/project/tsconfig.build.json"
-         - "./lint-staged.config.js:/opt/project/lint-staged.config.js"
+    app:
+        image: node:14-buster
+        working_dir: /opt/project
+        volumes:
+            - "./node_modules:/opt/project/node_modules"
+            - "./package.json:/opt/project/package.json"
+            - "./yarn.lock:/opt/project/yarn.lock"
+            - "./tsconfig.json:/opt/project/tsconfig.json"
+            - "./tsconfig.build.json:/opt/project/tsconfig.build.json"
